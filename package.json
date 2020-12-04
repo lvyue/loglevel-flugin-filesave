@@ -2,15 +2,11 @@
   "name": "typescript-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.umd.js",
-  "typings": "lib/esm/index.d.ts",
-  "module": "lib/esm/index.js",
+  "typings": "lib/index.d.ts",
+  "main": "lib/index.js",
   "scripts": {
-    "build:ts": "tsc -p tsconfig.esm.json",
-    "build:webpack": "NODE_ENV=production webpack",
-    "build": "npm run build:webpack && npm run build:ts",
-    "watch:ts": "tsc -p tsconfig.esm.json -w",
-    "watch:webpack": "webpack -w",
+    "build": "tsc -p tsconfig.json",
+    "watch": "tsc -p tsconfig.json -w",
     "lint": "eslint . --fix"
   },
   "repository": {
@@ -33,12 +29,11 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
+    "loglevel": "^1.7.1",
     "prettier": "^2.0.5",
     "source-map": "^0.7.3",
     "ts-loader": "^8.0.1",
-    "typescript": "^3.9.7",
-    "webpack": "^4.44.0",
-    "webpack-cli": "^3.3.12"
+    "typescript": "^3.9.7"
   },
   "husky": {
     "hooks": {
